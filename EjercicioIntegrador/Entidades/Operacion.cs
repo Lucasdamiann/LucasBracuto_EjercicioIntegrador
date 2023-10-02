@@ -43,7 +43,7 @@ namespace Entidades
         }
         public Numeracion Operar(char operador)
         {
-            
+
             double auxiliar1 = double.Parse(this.primerOperando.Valor);
             double auxiliar2 = double.Parse(this.segundoOperando.Valor);
             double calculo = 0;
@@ -58,7 +58,7 @@ namespace Entidades
                     break;
                 case '/':
                     if (double.Parse(this.segundoOperando.Valor) != 0)
-                    { 
+                    {
                         calculo = auxiliar1 / auxiliar2;
                     }
                     break;

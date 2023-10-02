@@ -16,7 +16,6 @@ namespace MiCalculadora
 
         private void lblResultado_Click(object sender, EventArgs e)
         {
-
         }
 
         private void txtPrimerOperador_TextChanged(object sender, EventArgs e)
@@ -80,11 +79,7 @@ namespace MiCalculadora
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Button boton = sender as Button;
-            if (boton != null)
-            {
-                this.Close();
-            }
+            this.Close();
         }
 
         private void setResultado()

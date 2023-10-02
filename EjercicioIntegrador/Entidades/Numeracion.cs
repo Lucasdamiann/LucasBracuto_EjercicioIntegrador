@@ -91,9 +91,6 @@
 
         private void InicializarValores(string valor, ESistema sistema)
         {
-            //double.TryParse(valor, out double aux);
-            //this.valorNumerico = aux;
-            //this.sistema = sistema;
             this.valorNumerico = double.MinValue;
             if (sistema == ESistema.Binario && EsBinario(valor))
             {
@@ -117,19 +114,19 @@
             return !(n1.sistema == n2.sistema);
         }
 
-        public static Numeracion operator - (Numeracion n1, Numeracion n2)
+        public static Numeracion operator -(Numeracion n1, Numeracion n2)
         {
             Numeracion numeracion = new Numeracion(double.Parse(n1.Valor) - double.Parse(n2.Valor), ESistema.Decimal);
             return numeracion;
         }
 
-        public static Numeracion operator * (Numeracion n1, Numeracion n2)
+        public static Numeracion operator *(Numeracion n1, Numeracion n2)
         {
             Numeracion numeracion = new Numeracion(double.Parse(n1.Valor) * double.Parse(n2.Valor), ESistema.Decimal);
             return numeracion;
         }
 
-        public static Numeracion operator / (Numeracion n1, Numeracion n2)
+        public static Numeracion operator /(Numeracion n1, Numeracion n2)
         {
             Numeracion numeracion = n2;
             if ((double.Parse(n2.Valor)) != 0)
@@ -139,17 +136,17 @@
             return numeracion;
         }
 
-        public static Numeracion operator + (Numeracion n1, Numeracion n2)
+        public static Numeracion operator +(Numeracion n1, Numeracion n2)
         {
             Numeracion numeracion = new Numeracion(double.Parse(n1.Valor) + double.Parse(n2.Valor), ESistema.Decimal);
             return numeracion;
         }
 
-        public static bool operator == (ESistema sistema, Numeracion numeracion)
+        public static bool operator ==(ESistema sistema, Numeracion numeracion)
         {
             return sistema == numeracion.sistema;
         }
-        public static bool operator == (Numeracion n1, Numeracion n2)
+        public static bool operator ==(Numeracion n1, Numeracion n2)
         {
             return n1.sistema == n2.sistema;
         }
